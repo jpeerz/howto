@@ -1,6 +1,7 @@
 ## Implementing logs aggregator
 
 [~best-log-aggregation-monitoring-tools](https://www.slant.co/topics/326/~best-log-aggregation-monitoring-tools)
+[logging: logstash and other things - Jordan Sissel of DreamHost - PuppetConf '12](https://www.youtube.com/watch?v=RuUFnog29M4)
 
 ### Create test environment
 
@@ -126,42 +127,34 @@ Create your first pipeline
 
 [kibana](http://localhost:5601)
 
+Control main services
 
-ubuntu@ubuntu-xenial:~$ 
-ubuntu@ubuntu-xenial:~$ sudo su
-root@ubuntu-xenial:/home/ubuntu# systemctl start elasticsearch.service
-root@ubuntu-xenial:/home/ubuntu# systemctl start logstash.service
-root@ubuntu-xenial:/home/ubuntu# systemctl start filebeat.service
-root@ubuntu-xenial:/home/ubuntu# systemctl start kibana.service
-root@ubuntu-xenial:/home/ubuntu# 
+    ubuntu@ubuntu-xenial:~$ 
+    ubuntu@ubuntu-xenial:~$ sudo su
+    root@ubuntu-xenial:/home/ubuntu# systemctl start elasticsearch.service
+    root@ubuntu-xenial:/home/ubuntu# systemctl start logstash.service
+    root@ubuntu-xenial:/home/ubuntu# systemctl start filebeat.service
+    root@ubuntu-xenial:/home/ubuntu# systemctl start kibana.service
+    root@ubuntu-xenial:/home/ubuntu# 
 
-Apr 19 21:42:49 ubuntu-xenial su[1779]: pam_systemd(su:session): Cannot create session: Already running in a session
-Apr 19 21:43:01 ubuntu-xenial systemd[1]: Starting Elasticsearch...
-Apr 19 21:43:01 ubuntu-xenial systemd[1]: Started Elasticsearch.
-Apr 19 21:43:08 ubuntu-xenial systemd[1]: Started logstash.
-Apr 19 21:43:15 ubuntu-xenial systemd[1]: Started filebeat.
-Apr 19 21:43:21 ubuntu-xenial systemd[1]: Started Kibana.
+Monitor for startup activity
 
-systemctl start elasticsearch.service
-systemctl start logstash.service
-systemctl start filebeat.service
-systemctl start kibana.service
+    Apr 19 21:42:49 ubuntu-xenial su[1779]: pam_systemd(su:session): Cannot create session: Already running in a session
+    Apr 19 21:43:01 ubuntu-xenial systemd[1]: Starting Elasticsearch...
+    Apr 19 21:43:01 ubuntu-xenial systemd[1]: Started Elasticsearch.
+    Apr 19 21:43:08 ubuntu-xenial systemd[1]: Started logstash.
+    Apr 19 21:43:15 ubuntu-xenial systemd[1]: Started filebeat.
+    Apr 19 21:43:21 ubuntu-xenial systemd[1]: Started Kibana.
 
-systemctl stop kibana.service
-systemctl stop filebeat.service
-systemctl stop logstash.service
-systemctl stop elasticsearch.service
+Check web instance is available
 
-
-https://www.youtube.com/watch?v=RuUFnog29M4
-
-root@ubuntu-xenial:/home/ubuntu# curl 'localhost:9200/_cat/indices?v'
-    health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size
-    yellow open   .kibana             Ru4w0KGQRLOa-Ogp5dHk7Q   1   1          2            0     23.4kb         23.4kb
-    yellow open   filebeat-2017.04.20 bhSrqJLpQk2RTrJikBjTXw   5   1    1278749            0    152.8mb        152.8mb
-    yellow open   logstash-2017.04.20 ez3TSPJZSniovcTPHtd92Q   5   1     586259            0     76.1mb         76.1mb
-    yellow open   filebeat-2017.04.19 LvDgezqwSDaVVzg0utKIqg   5   1    3414161            0      407mb          407mb
-root@ubuntu-xenial:/home/ubuntu# 
+    root@ubuntu-xenial:/home/ubuntu# curl 'localhost:9200/_cat/indices?v'
+        health status index               uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+        yellow open   .kibana             Ru4w0KGQRLOa-Ogp5dHk7Q   1   1          2            0     23.4kb         23.4kb
+        yellow open   filebeat-2017.04.20 bhSrqJLpQk2RTrJikBjTXw   5   1    1278749            0    152.8mb        152.8mb
+        yellow open   logstash-2017.04.20 ez3TSPJZSniovcTPHtd92Q   5   1     586259            0     76.1mb         76.1mb
+        yellow open   filebeat-2017.04.19 LvDgezqwSDaVVzg0utKIqg   5   1    3414161            0      407mb          407mb
+    root@ubuntu-xenial:/home/ubuntu# 
 
 ## nagios and elastic search
 
@@ -169,8 +162,10 @@ root@ubuntu-xenial:/home/ubuntu#
 
 You can also alter the commands in your /usr/local/nagios/etc/nrpe/common.cfg. Some example command definitions are as follows:
 
-command[check_total_procs]              =/usr/local/nagios/libexec/check_procs -w 150 -c 200
-command[check_for_elasticsearch_proc]   =/usr/local/nagios/libexec/check_procs -a elasticsearch -w 1:1 -c 1:1
-command[check_for_logstash_proc]        =/usr/local/nagios/libexec/check_procs -a logstash -w 2:2 -c 2:2
+    command[check_total_procs]              =/usr/local/nagios/libexec/check_procs -w 150 -c 200
+    command[check_for_elasticsearch_proc]   =/usr/local/nagios/libexec/check_procs -a elasticsearch -w 1:1 -c 1:1
+    command[check_for_logstash_proc]        =/usr/local/nagios/libexec/check_procs -a logstash -w 2:2 -c 2:2
+
+Start with data on elasticsearch
 
 
