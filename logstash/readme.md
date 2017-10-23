@@ -1,7 +1,22 @@
 ## Implementing logs aggregator
 
+### The big picture
+
+image
+
+### Oveview
+
+Top logger services by slant
 [~best-log-aggregation-monitoring-tools](https://www.slant.co/topics/326/~best-log-aggregation-monitoring-tools)
+
+Recomended video
 [logging: logstash and other things - Jordan Sissel of DreamHost - PuppetConf '12](https://www.youtube.com/watch?v=RuUFnog29M4)
+
+### Ingredients
+
+* server
+* java repo
+* elasticsearch repo
 
 ### Create test environment
 
