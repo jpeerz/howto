@@ -80,12 +80,16 @@ In order to improve our skills on server automation we need to excercise the abi
 9. Generate a folder structure from a plain text file descriptor.
 10. Generate random txt/json/xml files with content downloaded from any website. organice files into folders created previously.
 11. Install/configure google maps api. use [getting started with APIs ](https://console.cloud.google.com/apis/dashboard)
+12. TBD .. more excercises with G api
 
 #### Machine state backup
 
 1. Define and document how to go back to a previous server state. Investigate about modern tools to do that.
+2. Create new user at your server with limited access.
+3. Setup a python virtual environment and read about [AWS-CLI](https://aws.amazon.com/documentation/cli)
+4. TBD .. more destroy and create
 
-#### Localhost work
+#### The localhost work
 
 1. Setup a local virtual machine to work with remote playground. replicate confguration created previously.
 2. Destroy and recreate.
