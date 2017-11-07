@@ -4,7 +4,7 @@
 
 This document describes how to achieve few skills on server management job. It focuses on _learn by doing_.
 
-### Required Technical Skills
+### Required Technical Skills/Tools
 
 * Basic/Advanced knowledge of networking
     * nslookup
@@ -62,6 +62,11 @@ In order to improve our skills on server automation we need to excercise the abi
 2. Configure local credentials and store secrets safe. Investigate/Read/Document how and where important files are located on the client machine.
 3. List the contents of the user folder from a computer under your local network. Document all steps required to get there.
 
+#### Connection and Communication
+
+1. Access remote server from your local shell application.
+2. Configure connection to by pass password input (certificates, keys, etc)
+
 #### Server playground setup
 
 1. Subscribe/Configure any remote server of your choice. Suggestions [Openshift](https://manage.openshift.com/), [Heroku](https://signup.heroku.com), [CodeAnyWhere](https://codeanywhere.com/dashboard)
@@ -75,11 +80,6 @@ In order to improve our skills on server automation we need to excercise the abi
 9. Generate a folder structure from a plain text file descriptor.
 10. Generate random txt/json/xml files with content downloaded from any website. organice files into folders created previously.
 11. Install/configure google maps api. use [getting started with APIs ](https://console.cloud.google.com/apis/dashboard)
-
-#### Connection and Communication
-
-1. Access remote server from your local shell application.
-2. Configure connection to by pass password input (certificates, keys, etc)
 
 #### Machine state backup
 
