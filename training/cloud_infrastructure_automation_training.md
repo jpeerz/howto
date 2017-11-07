@@ -64,54 +64,39 @@ In order to improve our skills on server automation we need to excercise the abi
 
 #### Server playground setup
 
-1. Subscribe/Configure any remote server of your choice. Suggestions (Openshift, Heroku, CodeAnyWhere)
+1. Subscribe/Configure any remote server of your choice. Suggestions [Openshift](https://manage.openshift.com/), [Heroku](https://signup.heroku.com), [CodeAnyWhere](https://codeanywhere.com/dashboard)
+2. Install and configure a web server
+3. Publish a static web page on new web server instance
+4. Publish a dynamic web page on new web server instance (shows folder contents, date, random content)
+5. Add javascript to your web site, use frameworksif you like.
+6. Create some REST end-points. Enable security.
+7. Watch web server logs: Create a web uri to display self server activity.
+8. Spot the error: root cause analisys.
+9. Generate a folder structure from a plain text file descriptor.
+10. Generate random txt/json/xml files with content downloaded from any website. organice files into folders created previously.
+11. Install/configure google maps api. use [getting started with APIs ](https://console.cloud.google.com/apis/dashboard)
 
 #### Connection and Communication
 
 1. Access remote server from your local shell application.
+2. Configure connection to by pass password input (certificates, keys, etc)
 
 #### Machine state backup
 
-1. Define and document how to go back to a previous server state.
+1. Define and document how to go back to a previous server state. Investigate about modern tools to do that.
 
 #### Localhost work
 
-1. Setup a local virtual machine to work with remote playground. replicate confguration create previously.
+1. Setup a local virtual machine to work with remote playground. replicate confguration created previously.
 2. Destroy and recreate.
+3. Create and configure a AWS account
+4. Setup local credentials and install CLI tool.
+5. Write server descriptor to deploy basic LAMP machine.
 
+### Other insteresting resources
 
-TODO - excercise for:
-
-deploy a web server
-
-host a static page
-
-host a dynamic page
-
-add javascript, code something, use frameworks if you like.
-
-create some REST end-points
-
-watch service log, spot error, root cause analisys.
-
-generate a folder structure from a plain text file descriptor.
-
-generate random txt/json/xml files with content downloaded from any website. organice files into folders created previously.
-
-install/configure google maps api. use [getting started with APIs ](https://console.cloud.google.com/apis/dashboard)
-
-[Oracle Cloud](https://myservices.us.oraclecloud.com/mycloud/signup?language=en)
-
-create and configure aws account
-
-setup local credentials and install CLI tools.
-
-
-
-[CFN designer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/working-with-templates-cfn-designer-json-editor.html?icmpid=docs_cfn_console_designer)
-
-
-
+* [Oracle Cloud](https://myservices.us.oraclecloud.com/mycloud/signup?language=en)
+* [CFN designer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/working-with-templates-cfn-designer-json-editor.html?icmpid=docs_cfn_console_designer)
 
 
 
