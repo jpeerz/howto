@@ -72,16 +72,43 @@ In order to improve our skills on server automation we need to excercise the abi
 
 #### Machine state backup
 
-1. Define
+1. Define and document how to go back to a previous server state.
+
+#### Localhost work
+
+1. Setup a local virtual machine to work with remote playground. replicate confguration create previously.
+2. Destroy and recreate.
+
+
+TODO - excercise for:
 
 deploy a web server
+
 host a static page
+
 host a dynamic page
-generate a folder structure from a plain text file descriptor
+
+add javascript, code something, use frameworks if you like.
+
+create some REST end-points
+
+watch service log, spot error, root cause analisys.
+
+generate a folder structure from a plain text file descriptor.
+
 generate random txt/json/xml files with content downloaded from any website. organice files into folders created previously.
 
+install/configure google maps api. use [getting started with APIs ](https://console.cloud.google.com/apis/dashboard)
+
+[Oracle Cloud](https://myservices.us.oraclecloud.com/mycloud/signup?language=en)
+
+create and configure aws account
+
+setup local credentials and install CLI tools.
 
 
+
+[CFN designer](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/working-with-templates-cfn-designer-json-editor.html?icmpid=docs_cfn_console_designer)
 
 
 
