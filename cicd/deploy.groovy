@@ -32,30 +32,33 @@ node ("deploy"){
     
     stage('Fetch New Containers') {
         try {
-            docker.withRegistry("http://${DOCKER_REGISTRY}"){
+            echo 'Downloading new package'
+            /*docker.withRegistry("http://${DOCKER_REGISTRY}"){
                 myapp = docker.image("app:${RELEASE_NAME}")
                 myapp.pull()
-            }
+            }*/
         } catch(Exception err) {
-            echo "Building hygieia container failed: $err"
+            echo "Building container failed: $err"
             throw err
         }
     }
     
     stage('Startup Database') {
         try {
-            sh "docker run -d --name mongodb "
+            //sh "docker run -d --name mongodb "
+            echo 'Configuring DB'
         } catch(Exception err) {
             echo "Deploying database container failed: $err"
             throw err
         }
     }
     
-    stage('Run Hygieia') {
+    stage('Run App') {
         try {
             //sh "docker run -d --name "
+            echo 'Starting Docker app'
         } catch(Exception err) {
-            echo "Deploying hygieia container failed: $err"
+            echo "Deploying container failed: $err"
             throw err
         }
     }

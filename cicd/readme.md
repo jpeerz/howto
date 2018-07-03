@@ -56,3 +56,9 @@ Or with persistence volume
 https://www.jfrog.com/confluence/display/RTF/Jenkins+Artifactory+Plug-in
 https://github.com/jenkinsci/artifactory-plugin
 
+
+## download artifact and run from Sandbox machine
+
+~/workspace/build$ java -jar ./web/target/gs-serving-web-content-0.1.0.jar
+
+
