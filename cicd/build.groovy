@@ -51,6 +51,9 @@ node ("build"){
         }
     }
     
+    stage("Save in Artifactory"){
+    }
+    
     /*stage('Rebuild Containers') {
         try {
             do_maven("-f web/pom.xml docker:build --fail-never -Dmaven.test.skip=true -Dlicense.skip=true")

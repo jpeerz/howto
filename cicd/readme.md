@@ -62,3 +62,4 @@ https://github.com/jenkinsci/artifactory-plugin
 ~/workspace/build$ java -jar ./web/target/gs-serving-web-content-0.1.0.jar
 
 
+462922428
